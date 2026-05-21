@@ -1,0 +1,17 @@
+steps: 
+# terraform init
+- name: hashicorp/terraform:light
+  entrypoint: 'sh'
+  args: 
+    - '-c'
+    - |
+      cd /working-modules
+      terraform init
+ # terraform plan 
+- name: hashicorp/terraform:light
+  entrypoint: 'sh'
+  args: 
+    - '-c'
+    - |
+      cd /working-modules
+      terraform plan -out=tfplan     
