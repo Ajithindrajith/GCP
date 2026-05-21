@@ -15,3 +15,5 @@ steps:
     - |
       cd /working-modules
       terraform plan -out=tfplan     
+options:
+ logging: CLOUD_LOGGING_ONLY  
