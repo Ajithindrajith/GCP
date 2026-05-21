@@ -14,6 +14,6 @@ steps:
     - '-c'
     - |
       cd /workspace/working-modules
-      terraform plan -out=tfplan     
+      terraform plan -var-file="input.auto.tfvars"    
 options:
  logging: CLOUD_LOGGING_ONLY  
