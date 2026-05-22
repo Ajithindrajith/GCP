@@ -17,5 +17,13 @@ steps:
       ls -R
       cd /workspace/working-modules
       terraform plan -var-file="input.tfvars"    
+
+- name: hashicorp/terraform:light
+  entrypoint: 'sh'
+  args: 
+    - '-c'
+    - |
+      cd /workspace/working-modules
+      terraform apply -var-file="input.tfvars" -auto-approve      
 options:
  logging: CLOUD_LOGGING_ONLY  
