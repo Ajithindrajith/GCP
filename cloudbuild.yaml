@@ -13,6 +13,8 @@ steps:
   args: 
     - '-c'
     - |
+      pwd
+      ls -R
       cd /workspace/working-modules
       terraform plan -var-file="input.tfvars"    
 options:
